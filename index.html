@@ -1,195 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Web Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunrise Restaurant | Goraya, Punjab</title>
 
-    <style>
-        :root {
-            --bg: #0f172a;
-            --card-bg: #1e293b;
-            --primary: #38bdf8;
-            --text: #f1f5f9;
-            --muted: #94a3b8;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        * {
-            box-sizing: border-box;
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+html{scroll-behavior:smooth}
+body{background:#0b1120;color:#fff;overflow-x:hidden}
 
-        body {
-            margin: 0;
-            padding: 20px;
-            background: var(--bg);
-            color: var(--text);
-            font-family: Arial, sans-serif;
-        }
+:root{
+--gold:#f59e0b;
+--card:#172033;
+--text:#d1d5db;
+}
 
-        .wrapper {
-            max-width: 700px;
-            margin: 40px auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid #334155;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(11,17,32,.95);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
 
-        h1 {
-            color: var(--primary);
-            margin-top: 0;
-            text-align: center;
-        }
+.logo{
+font-size:28px;
+font-weight:800;
+color:var(--gold);
+}
 
-        .subtitle {
-            text-align: center;
-            color: var(--muted);
-            margin-bottom: 30px;
-        }
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
 
-        .features {
-            background: rgba(0,0,0,0.2);
-            padding: 20px;
-            border-radius: 12px;
-            margin: 25px 0;
-            border-left: 4px solid var(--primary);
-        }
+nav a{
+text-decoration:none;
+color:white;
+}
 
-        .features ul {
-            color: var(--muted);
-            padding-left: 20px;
-        }
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+}
 
-        .cta-group {
-            text-align: center;
-            margin: 30px 0;
-        }
+.hero h1{
+font-size:65px;
+margin-bottom:15px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.hero p{
+max-width:750px;
+margin:auto;
+color:#e5e7eb;
+line-height:1.8;
+}
 
-        .btn:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:var(--gold);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+}
 
-        .btn-primary {
-            background: var(--primary);
-            color: #000;
-        }
+section{
+padding:90px 8%;
+}
 
-        .btn-social {
-            background: #e1306c;
-            color: white;
-        }
+.title{
+text-align:center;
+font-size:42px;
+margin-bottom:45px;
+}
 
-        .qr-section {
-            text-align: center;
-            margin-top: 40px;
-            border-top: 1px solid #334155;
-            padding-top: 30px;
-        }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-        .qr-image {
-            width: 220px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 4px solid white;
-            margin: 20px auto;
-            display: block;
-        }
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
 
-        .contact-box {
-            background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
+.card:hover{
+transform:translateY(-8px);
+}
 
-        a {
-            color: var(--primary);
-        }
-    </style>
+.card h3{
+color:var(--gold);
+margin-bottom:10px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.stat{
+background:var(--card);
+padding:30px;
+border-radius:18px;
+text-align:center;
+}
+
+.stat h2{
+color:var(--gold);
+font-size:40px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+}
+
+.testimonial{
+background:var(--card);
+padding:25px;
+border-radius:20px;
+}
+
+.contact{
+background:var(--card);
+padding:35px;
+border-radius:20px;
+}
+
+.map{
+width:100%;
+height:350px;
+border:none;
+border-radius:20px;
+margin-top:25px;
+}
+
+footer{
+background:#020617;
+padding:50px 20px;
+text-align:center;
+}
+
+.float-btn{
+position:fixed;
+right:20px;
+width:60px;
+height:60px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+color:white;
+text-decoration:none;
+font-size:22px;
+font-weight:bold;
+z-index:999;
+}
+
+.whatsapp{
+bottom:20px;
+background:#25D366;
+}
+
+.call{
+bottom:90px;
+background:#f59e0b;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+nav ul{
+display:none;
+}
+
+.title{
+font-size:32px;
+}
+
+}
+</style>
 </head>
+
 <body>
 
-<div class="wrapper">
+<nav>
+<div class="logo">Sunrise Restaurant</div>
 
-    <h1>Professional Web Template</h1>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-    <p class="subtitle">
-        Unlock a high-performance, responsive website template optimized for modern browsers.
-    </p>
+<section class="hero">
 
-    <div class="features">
-        <h3>Key Features</h3>
+<div>
 
-        <ul>
-            <li>Clean and organized source code</li>
-            <li>Fully responsive design</li>
-            <li>SEO-friendly structure</li>
-            <li>Fast loading speed</li>
-            <li>Modern UI/UX design</li>
-            <li>Easy customization</li>
-        </ul>
-    </div>
+<h1>Authentic Punjabi Flavours</h1>
 
-    <!-- LIVE DEMO BUTTON -->
-    <div class="cta-group">
-        <a href="https://resturantwebsitesale.netlify.app/" target="_blank" class="btn btn-primary">
-            🚀 View Live Demo
-        </a>
-    </div>
+<p>
+Experience delicious Indian and Punjabi cuisine at Sunrise Restaurant, Goraya's favourite family dining destination.
+</p>
 
-    <!-- PAYMENT SECTION -->
-    <div class="qr-section">
-
-        <h2>Secure Access</h2>
-
-        <p>Scan the QR code below to complete payment.</p>
-
-        <!-- YOUR QR IMAGE -->
-        <img src="./1782190510430.jpg" alt="Payment QR Code" class="qr-image">
-
-        <p><strong>Price: ₹200</strong></p>
-
-        <div class="contact-box">
-
-            <p><strong>Step 1:</strong> Complete the payment.</p>
-
-            <p><strong>Step 2:</strong> Send payment screenshot to:</p>
-
-            <p>
-                <a href="mailto:vanshdesignofficial12@gmail.com">
-                    vanshdesignofficial12@gmail.com
-                </a>
-            </p>
-
-            <p><strong>OR</strong></p>
-
-            <p>Contact on Instagram for instant delivery:</p>
-
-            <a href="https://instagram.com/justvansh01" class="btn btn-social">
-                Message @justvansh01
-            </a>
-
-        </div>
-
-        <p style="font-size: 14px; color: var(--muted); margin-top: 20px;">
-            Files delivered after payment verification.
-        </p>
-
-    </div>
+<a href="tel:+919781405903" class="btn">Reserve / Call Now</a>
 
 </div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Sunrise Restaurant</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Family Friendly</h3>
+<p>Comfortable dining atmosphere for families and groups.</p>
+</div>
+
+<div class="card">
+<h3>Authentic Taste</h3>
+<p>Traditional Punjabi recipes prepared with care.</p>
+</div>
+
+<div class="card">
+<h3>Affordable Dining</h3>
+<p>Average meal cost between ₹200–₹400 per person.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Restaurant Facts</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>4.1★</h2>
+<p>Google Rating</p>
+</div>
+
+<div class="stat">
+<h2>136+</h2>
+<p>Reviews</p>
+</div>
+
+<div class="stat">
+<h2>₹200-400</h2>
+<p>Average Cost</p>
+</div>
+
+<div class="stat">
+<h2>11AM</h2>
+<p>To 10:30PM Daily</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="menu">
+
+<h2 class="title">Popular Categories</h2>
+
+<div class="grid">
+
+<div class="card"><h3>Paneer Dishes</h3><p>Rich Punjabi paneer specialties.</p></div>
+
+<div class="card"><h3>Dal Preparations</h3><p>Traditional Indian dal favourites.</p></div>
+
+<div class="card"><h3>Naan & Roti</h3><p>Freshly baked breads.</p></div>
+
+<div class="card"><h3>Rice Dishes</h3><p>Flavourful rice preparations.</p></div>
+
+<div class="card"><h3>Fast Food</h3><p>Snacks and quick bites.</p></div>
+
+<div class="card"><h3>Desserts</h3><p>Sweet treats and beverages.</p></div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Customer Reviews</h2>
+
+<div class="grid">
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>"Excellent food and great service. Perfect family restaurant."</p>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>"Authentic Punjabi taste with affordable prices."</p>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>"Nice atmosphere and friendly staff."</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Visit Us</h2>
+
+<div class="contact">
+
+<p><strong>Restaurant:</strong> Sunrise Restaurant</p>
+<p><strong>Address:</strong> Bara Pind Road, Goraya, Punjab 144409</p>
+<p><strong>Phone:</strong> +91 97814 05903</p>
+<p><strong>Open:</strong> Daily 11:00 AM – 10:30 PM</p>
+
+<iframe class="map"
+src="https://maps.google.com/maps?q=Sunrise%20Restaurant%20Goraya&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="color:#f59e0b;">Sunrise Restaurant</h2>
+
+<p>Serving Delicious Punjabi Cuisine in Goraya</p>
+
+<br>
+
+<p>© 2026 Sunrise Restaurant. All Rights Reserved.</p>
+
+</footer>
+
+<a href="tel:+919781405903" class="float-btn call">📞</a>
+
+<a href="https://wa.me/919781405903" class="float-btn whatsapp">💬</a>
 
 </body>
 </html>
